@@ -32,7 +32,8 @@
     "test": "craco test",
     "testCI": "craco test --forceExit",
     "testWatch": "craco test --watchAll",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "runGHActions": "act"
   },
   "eslintConfig": {
     "extends": [

@@ -8,7 +8,8 @@
     "startDev": "nodemon index.js",
     "test": "jest --forceExit",
     "testCI": "jest --forceExit",
-    "testWatch": "jest --watchAll"
+    "testWatch": "jest --watchAll",
+    "runGHActions": "act"
   },
   "author": "",
   "license": "ISC",
