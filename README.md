@@ -1,2 +1,2 @@
 # cicandy
-Toying around with omnirepo CI.
+Toying around with CI/CD in omnirepos.
