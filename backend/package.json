@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "startDev": "nodemon index.js"
+    "startDev": "nodemon index.js",
+    "test": "jest --forceExit",
+    "testCI": "jest --forceExit",
+    "testWatch": "jest --watchAll"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +17,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "jest": "^27.0.4",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }

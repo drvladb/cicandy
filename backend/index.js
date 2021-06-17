@@ -13,6 +13,8 @@ app.get('/test', (req, res) => {
 });
 
 const port = process.env.PORT || 3001;
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`);
 });
+
+module.exports = { app, server };
