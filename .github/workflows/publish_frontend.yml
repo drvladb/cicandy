@@ -1,9 +1,9 @@
-name: Publish Backend Docker Contaienr
+name: Publish Frontend Docker Contaienr
 
 on:
   push:
     paths:
-      - backend/**
+      - frontend/**
   workflow_dispatch:
 
 jobs:
@@ -26,8 +26,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: ./backend
+          context: ./frontend
           tags: |
-            docker.pkg.github.com/${{ github.repository }}/backend:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/backend:main
-            docker.pkg.github.com/${{ github.repository }}/backend:latest
+            docker.pkg.github.com/${{ github.repository }}/frontend:${{ github.sha }}
+            docker.pkg.github.com/${{ github.repository }}/frontend:main
+            docker.pkg.github.com/${{ github.repository }}/frontend:latest
