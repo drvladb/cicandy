@@ -28,5 +28,5 @@ jobs:
           push: true
           tags: |
             docker.pkg.github.com/${{ github.repository }}/backend:latest
+            docker.pkg.github.com/${{ github.repository }}/backend:main
             docker.pkg.github.com/${{ github.repository }}/backend:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/backend:${{ github.ref }}
