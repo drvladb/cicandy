@@ -15,9 +15,9 @@ jobs:
           node-version: 15.x
       - name: Run the setup script
         run: |
-          sh ./scripts/e2e/setup.sh
+          sh ./e2e/scripts/setup.sh
       - name: Start Services & Run E2E testing
         run: |
-          sh ./scripts/e2e/runServe.sh &
-          sh ./scripts/e2e/runExpress.sh &
-          sh ./scripts/e2e/runTests.sh
+          sh ./e2e/scripts/runServe.sh &
+          sh ./e2e/scripts/runExpress.sh &
+          sh ./e2e/scripts/runTests.sh
