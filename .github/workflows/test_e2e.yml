@@ -1,0 +1,23 @@
+name: Test E2E
+on:
+  push:
+    paths:
+      - frontend/**
+      - backend/**
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 15.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
+      - name: Run the setup script
+        run: |
+          sh ./scripts/e2e/setup.sh
+      - name: Start Services & Run E2E testing
+        run: |
+          sh ./scripts/e2e/runServe.sh &
+          sh ./scripts/e2e/runExpress.sh &
+          sh ./scripts/e2e/runTests.sh
